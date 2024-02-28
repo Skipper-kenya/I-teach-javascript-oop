@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javaScript Classes</title>
+  </head>
+  <body>
+    <h3>Object Oriented Proggramming</h3>
+    <script>
+      //OOP with javascript classes
+
+      //definition
+      //syntax for defining a javascript class
+
+      //class classname{}
+
+      class MyFriends {}
+
+      //javascript classes have instance properties(props) and instance methods(function)
+
+      //we can define an instance props for the myFriends class  using constructor keyword as follows
+
+      class myFriends {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+      }
+
+      //we can define instance methods for the myFriends class as follows
+
+      //NB WE ARE USING DIFFERENT CLASS NAME TO GO ABOUT WITH JAVASCRIPT ALGORITHM BUT YOU CAN AS WELL COMMENT THE ABOVE CLASS AND USE THE SAME CLASS NAME
+
+      class myFriends1 {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        //we are having instance method below;
+
+        displayFriends() {
+          return `my name is ${this.name} and i'm ${this.age} years old.`;
+        }
+      }
+
+      //we can call the displayFriends method by creating an object instance as shown below
+
+      const elvis = new myFriends1("Elvis", 22);
+
+      //calling the displayFriends method
+      console.log(elvis.displayFriends()); // we print out to the console what our instance method return
+
+      // we can as well create a second friend named peter
+
+      const peter = new myFriends1("Peter", 20);
+      console.log(peter.displayFriends());
+
+      /*WE ARE DONE WITH THE BASICS NOW LETS LOOK AT GETTER AND SETTER METHODS*/
+
+      //setter methods => initialize with set keyword followed by method name
+
+      //getter methods => initialize with get keyword followed by method name
+
+      //EXAMPLE
+
+      class FrontEnd {
+        constructor() {
+          this._language;
+        }
+
+        //getter
+        get language() {
+          return `you requested for ${this._language}`;
+        }
+        set language(language) {
+          this._language = language;
+        }
+
+        // setter;
+        set language(lang) {
+          this._language = lang;
+        }
+      }
+
+      //we can now add a language by creating an object instance and calling in the setter function to add a language later on we will add the getter function to see what we have set
+
+      const html = new FrontEnd();
+      //setter function
+      html.language = "html";
+      //getter function
+      console.log(html.language);
+
+      /*STAY TUNED IN CONTENT ON PORLYMOPHISM AND INHERITANCE COMING SOON*/
+    </script>
+  </body>
+</html>
